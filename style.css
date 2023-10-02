@@ -1,0 +1,181 @@
+/* Custom properties */
+:root{
+    --clr-primary-cyan: 193 38% 86%;
+    --clr-primary-neon: 150 100% 66%;
+
+    --clr-neutral-dark: 218 23% 16%;
+    --clr-neutral-gray-blue: 217 19% 38%;
+    --clr-neutral-dark-grey: 217 19% 24%;
+
+    --ff-general: 'Manrope', sans-serif;
+    --ff-bold: 800;
+    
+    --fs-400: 0.85rem;
+    --fs-500: 1.75rem;
+}
+
+
+/* Custom properties */
+
+/* CSS reset */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body, 
+h1, 
+h2, 
+h3, 
+h4,
+h5,
+p, 
+figure,
+picture {
+  margin: 0;
+}
+
+h1, 
+h2, 
+h3, 
+h4,
+h5,
+p {
+  font-weight: 400;
+} 
+
+body{
+  line-height: 1.5;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  color: hsl(var(--clr-primary-cyan));
+  background-color: hsl(var(--clr-neutral-dark));
+  font-family: var(--ff-general);
+}
+
+img,
+picture{
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select{
+  font: inherit;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* CSS reset */
+
+/* Utility classes */
+
+/* typography */
+.fs-400{
+    font-size: var(--fs-400);
+}
+.fs-500{
+    font-size: var(--fs-500);
+}
+
+.ff-general {font-family: var(--ff-general);}
+
+.fw-bold{
+  font-weight: var(--ff-bold);
+}
+
+.container{
+  position: relative;
+  padding: 3.5rem 2rem;
+  margin-inline: 1rem;
+  max-width: 30rem;
+  border-radius: 0.75rem;
+  text-align: center;
+  background-color: hsl(217, 19%, 24%);
+  display: grid;
+  gap: 2rem;
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+/* colors */
+
+.bg-neon{
+  background-color: hsl(var(--clr-primary-neon));
+}
+.bg-cyan{
+  background-color: hsl(var(--clr-primary-cyan));
+}
+.bg-dark{
+  background-color: hsl(var(--clr-neutral-dark));
+}
+.bg-gray-blue{
+  background-color: hsl(var(--clr-neutral-gray-blue));
+}
+
+.text-neon{
+  color: hsl(var(--clr-primary-neon));
+}
+.text-cyan{
+  color: hsl(var(--clr-primary-cyan));
+}
+.text-dark{
+  color: hsl(var(--clr-neutral-dark));
+}
+.text-gray-blue{
+  color: hsl(var(--clr-neutral-gray-blue));
+}
+
+
+/* Utility classes */
+
+.btn{
+  background: url(./images/icon-dice.svg) center no-repeat;
+  background-color: hsl(var(--clr-primary-neon));
+  padding: 2rem;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  bottom: -10%;
+  left: 43%;
+}
+
+.btn:hover,
+.btn:focus{
+    box-shadow: 0 0 20px 10px hsl(var(--clr-primary-neon) / 0.3);
+}
+
+.header{
+  font-weight: 400;
+  letter-spacing: 4px;
+}
+
+
+.decorative{
+  background: url(images/pattern-divider-mobile.svg) center no-repeat;
+  padding: 0.5rem;
+}
+
+@media(min-width: 35rem){
+  .decorative{
+    background: url(images/pattern-divider-desktop.svg) center no-repeat;
+  }
+}
